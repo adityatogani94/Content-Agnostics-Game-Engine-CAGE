@@ -1,0 +1,136 @@
+-debug
+-target:library
+-nowarn:0169
+-langversion:4
+-out:Temp/Assembly-CSharp.dll
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll"
+-r:"C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll"
+-r:"C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll"
+-define:UNITY_5_3_OR_NEWER
+-define:UNITY_5_4_OR_NEWER
+-define:UNITY_5_5_OR_NEWER
+-define:UNITY_5_5_1
+-define:UNITY_5_5
+-define:UNITY_5
+-define:UNITY_64
+-define:UNITY_ANALYTICS
+-define:ENABLE_AUDIO
+-define:ENABLE_CACHING
+-define:ENABLE_CLOTH
+-define:ENABLE_DUCK_TYPING
+-define:ENABLE_GENERICS
+-define:ENABLE_MICROPHONE
+-define:ENABLE_MULTIPLE_DISPLAYS
+-define:ENABLE_PHYSICS
+-define:ENABLE_SPRITERENDERER_FLIPPING
+-define:ENABLE_SPRITES
+-define:ENABLE_TERRAIN
+-define:ENABLE_RAKNET
+-define:ENABLE_UNET
+-define:ENABLE_LZMA
+-define:ENABLE_UNITYEVENTS
+-define:ENABLE_WEBCAM
+-define:ENABLE_WWW
+-define:ENABLE_CLOUD_SERVICES_COLLAB
+-define:ENABLE_CLOUD_SERVICES_ADS
+-define:ENABLE_CLOUD_HUB
+-define:ENABLE_CLOUD_PROJECT_ID
+-define:ENABLE_CLOUD_SERVICES_UNET
+-define:ENABLE_CLOUD_SERVICES_BUILD
+-define:ENABLE_CLOUD_LICENSE
+-define:ENABLE_EDITOR_METRICS
+-define:ENABLE_EDITOR_METRICS_CACHING
+-define:INCLUDE_DYNAMIC_GI
+-define:INCLUDE_GI
+-define:PLATFORM_SUPPORTS_MONO
+-define:RENDER_SOFTWARE_CURSOR
+-define:INCLUDE_PUBNUB
+-define:ENABLE_PLAYMODE_TESTS_RUNNER
+-define:ENABLE_SCRIPTING_NEW_CSHARP_COMPILER
+-define:UNITY_STANDALONE_WIN
+-define:UNITY_STANDALONE
+-define:ENABLE_SUBSTANCE
+-define:ENABLE_RUNTIME_GI
+-define:ENABLE_MOVIES
+-define:ENABLE_NETWORK
+-define:ENABLE_CRUNCH_TEXTURE_COMPRESSION
+-define:ENABLE_UNITYWEBREQUEST
+-define:ENABLE_CLOUD_SERVICES
+-define:ENABLE_CLOUD_SERVICES_ANALYTICS
+-define:ENABLE_CLOUD_SERVICES_PURCHASING
+-define:ENABLE_CLOUD_SERVICES_CRASH_REPORTING
+-define:ENABLE_EVENT_QUEUE
+-define:ENABLE_CLUSTERINPUT
+-define:ENABLE_VIDEO
+-define:ENABLE_VR
+-define:ENABLE_WEBSOCKET_HOST
+-define:ENABLE_MONO
+-define:ENABLE_PROFILER
+-define:DEBUG
+-define:TRACE
+-define:UNITY_ASSERTIONS
+-define:UNITY_EDITOR
+-define:UNITY_EDITOR_64
+-define:UNITY_EDITOR_WIN
+-define:UNITY_TEAM_LICENSE
+-define:ENABLE_VSTU
+"Assets/Content Agnostic/Content Component/Content.cs"
+"Assets/Content Agnostic/Content Component/NoContent.cs"
+"Assets/Content Agnostic/Framework/Analytics.cs"
+"Assets/Content Agnostic/Framework/FrameworkCore.cs"
+"Assets/Content Agnostic/Framework/GUI/MainMenuManager.cs"
+"Assets/Content Agnostic/Framework/GameInfo.cs"
+"Assets/Content Agnostic/Framework/Hooks/ActionHook.cs"
+"Assets/Content Agnostic/Framework/Hooks/AnalyticsHook.cs"
+"Assets/Content Agnostic/Framework/Hooks/ErrorHook.cs"
+"Assets/Content Agnostic/Framework/Hooks/FailHook.cs"
+"Assets/Content Agnostic/Framework/Hooks/GameObjectHook.cs"
+"Assets/Content Agnostic/Framework/Hooks/Hook.cs"
+"Assets/Content Agnostic/Framework/Hooks/HookType.cs"
+"Assets/Content Agnostic/Framework/Hooks/IdleHook.cs"
+"Assets/Content Agnostic/Framework/Hooks/InputHook.cs"
+"Assets/Content Agnostic/Framework/Hooks/SuccessHook.cs"
+"Assets/Content Agnostic/Framework/Hooks/TaskHook.cs"
+"Assets/Content Agnostic/Framework/Task.cs"
+"Assets/Content Agnostic/Mechanics Component/Mechanics.cs"
+"Assets/Content Agnostic/Mechanics Component/NoMechanics.cs"
+"Assets/Content Agnostic/StudentModel/KnowledgeNode.cs"
+"Assets/Content Agnostic/StudentModel/QuestionNode.cs"
+"Assets/Content Agnostic/StudentModel/StudentModel.cs"
+"Assets/Content Agnostic/Utilities/DictionaryHandler.cs"
+"Assets/Content Agnostic/Utilities/FileManagement.cs"
+"Assets/Content Agnostic/Utilities/MathUtility.cs"
+Assets/Scripts/AffectiveStates.cs
+Assets/Scripts/Difficulty.cs
+Assets/Scripts/DontDestroyOnLoad.cs
+Assets/Scripts/EmotionWrapper.cs
+Assets/Scripts/Tracker.cs
+Assets/Scripts/VideoController.cs
+Assets/Scripts/VisageTrackerNative.Android.cs
+Assets/Scripts/VisageTrackerNative.OSX.cs
+Assets/Scripts/VisageTrackerNative.Windows.cs
+Assets/Scripts/VisageTrackerNative.cs
+Assets/Scripts/VisageTrackerNative.iOS.cs
+Assets/TutorialInfo/Scripts/TutorialInfo.cs
+Assets/_Scripts/CompareHook.cs
+Assets/_Scripts/Content1.cs
+Assets/_Scripts/Content2.cs
+Assets/_Scripts/DestroyByBoundary.cs
+Assets/_Scripts/DestroyByContact.cs
+Assets/_Scripts/DestroyByTime.cs
+Assets/_Scripts/GameController.cs
+Assets/_Scripts/MasteroidsMechanics.cs
+Assets/_Scripts/Mover.cs
+Assets/_Scripts/PlayerController.cs
+Assets/_Scripts/RandomRotator.cs
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Runtime.Serialization.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\System.Xml.Linq.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\UnityScript.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\UnityScript.Lang.dll"
+-r:"C:\Program Files\Unity\Editor\Data\MonoBleedingEdge\lib\mono\unity\Boo.Lang.dll"
+-sdk:unity
