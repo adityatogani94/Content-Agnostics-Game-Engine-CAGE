@@ -343,7 +343,7 @@ public class Tracker : MonoBehaviour
             meshFilter.mesh.triangles = Triangles;
             meshFilter.mesh.uv = TexCoords;
             meshFilter.mesh.uv2 = TexCoords;
-            meshFilter.mesh.Optimize();
+            ;
             meshFilter.mesh.RecalculateNormals();
             meshFilter.mesh.RecalculateBounds();
         }

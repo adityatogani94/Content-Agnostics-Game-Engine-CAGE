@@ -1,61 +1,44 @@
-Initialize engine version: 5.4.1f1 (649f48bbbf0f)
+Initialize engine version: 5.5.1f1 (88d00a7498cd)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
     Renderer: NVIDIA GeForce GT 750M (ID=0xfe4)
     Vendor:   NVIDIA
     VRAM:     2018 MB
+    Driver:   21.21.13.7849
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE\Masteroids_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE\Masteroids_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE\Masteroids_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE\Masteroids_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE\Masteroids_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE\Masteroids_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE\Masteroids_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE\Masteroids_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE\Masteroids_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE\Masteroids_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.763 seconds
-Platform assembly: C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE\Masteroids_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE\Masteroids_Data\Managed\System.dll (this message is harmless)
+Platform assembly: C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE - backup\Masteroids_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE - backup\Masteroids_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE - backup\Masteroids_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE - backup\Masteroids_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE - backup\Masteroids_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE - backup\Masteroids_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE - backup\Masteroids_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE - backup\Masteroids_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE - backup\Masteroids_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE - backup\Masteroids_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+Platform assembly: C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE - backup\Masteroids_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE - backup\Masteroids_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.335 seconds
+Platform assembly: C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE - backup\Masteroids_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\aditya\Desktop\Workspace - Fall 2016\CAGE\CAGE - backup\Masteroids_Data\Managed\System.dll (this message is harmless)
+OnLevelWasLoaded was found on EmotionWrapper
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+ 
+(Filename:  Line: 382)
+
 desktop: 1920x1080 60Hz; virtual: 1920x1848 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 1.893097 ms
-Setting up 2 worker threads for Enlighten.
-  Thread -> id: 32d0 -> priority: 1 
-  Thread -> id: 37f4 -> priority: 1 
-Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 13.651480 ms
-
-Unloading 11 unused Assets to reduce memory usage. Loaded Objects now: 354.
-Total: 0.284104 ms (FindLiveObjects: 0.017727 ms CreateObjectMapping: 0.019126 ms MarkObjects: 0.193135 ms  DeleteObjects: 0.028457 ms)
-
-2
+UnloadTime: 1.848778 ms
+Visage Tracker: Initializing tracker with config: 'C:/Users/aditya/Desktop/Workspace - Fall 2016/CAGE/CAGE - backup/Masteroids_Data/StreamingAssets/Visage Tracker/Facial Features Tracker - High.cfg'
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
-3
+NullReferenceException: Object reference not set to an instance of an object
+  at Tracker.Start () [0x00000] in <filename unknown>:0 
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-2
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-4
- 
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 42)
-
-Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
-UnloadTime: 0.718425 ms
-
-Unloading 100 unused Assets to reduce memory usage. Loaded Objects now: 279.
-Total: 0.637252 ms (FindLiveObjects: 0.031256 ms CreateObjectMapping: 0.028923 ms MarkObjects: 0.332621 ms  DeleteObjects: 0.243518 ms)
+(Filename:  Line: -1)
 
