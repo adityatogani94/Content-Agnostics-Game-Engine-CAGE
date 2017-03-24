@@ -79,10 +79,12 @@ public class MainMenuManager : MonoBehaviour
     {
         if(FrameworkCore.currentContent.GetType() == typeof(NoContent))
         {
+            Debug.Log("0");
             pulseDelay = DELAY;
         }
         else
         {
+            Debug.Log("1");
             // Loads the next scene in the build order. Main menu should be 0, first level should be 1, etc.
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }

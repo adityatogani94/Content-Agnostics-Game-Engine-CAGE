@@ -26,8 +26,8 @@ using System.Runtime.InteropServices;
 public class EmotionWrapper : MonoBehaviour
 {
     #region Settings
-    
-    
+
+
     // This bool is the master switch. If you uncheck this in the editor, no emotion or video stuff happens.
     public bool tracking;
     public bool showUI; // Switches whether the data is shown to the player or not.
@@ -45,7 +45,7 @@ public class EmotionWrapper : MonoBehaviour
     // These variables are related to difficulty. You may be interested in modifying these.
 
     private int[,] swarmNums = new int[5, 5]; // Holds the number of each of the five types of ships for each of the five difficulty levels. See function initDifficulty.
-    private Difficulty curDifficulty = Difficulty.Three; // The default difficulty level.
+    public static Difficulty curDifficulty = Difficulty.Four; // The default difficulty level.
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -92,11 +92,10 @@ public class EmotionWrapper : MonoBehaviour
     // Don't try to change difficulty (causes NullPointer) or bring up facecam on main menu.
     void OnLevelWasLoaded(int level)
     {
-        //FileManagement.setTime();
         if (level != 0)
         {
-            //*****FileManagement.startLevel(level);
-            setDifficulty(0);
+            //FileManagement.startLevel(level);
+            //setDifficulty(0);
             currentDelay = ANALYSISDELAY;
             if ((video != null) && tracking)
             {
@@ -112,7 +111,8 @@ public class EmotionWrapper : MonoBehaviour
         {
             if (gameObject.GetComponent<Tracker>().TrackerStatus != 0)
             {
-
+                //Debug.Log(curDifficulty);
+                //Debug.Log(currentState);
                 ///////////////////////////////////////////////////////////////////////////////////////////////////////
                 // Emotions are acqured here! Be extremely careful about making any changes to these two lines!
                 // The entire emotion system depends on these working successfully.
@@ -149,9 +149,9 @@ public class EmotionWrapper : MonoBehaviour
     }
 
     // Displays the current emotion info and state on screen.
-    void OnGUI()
+    /*void OnGUI()
     {
-        /*if (tracking && showUI)
+        if (tracking && showUI)
         {
             GUI.Box(GameUIScript.ScreenRect(GUIConstants.GUI_LEFT_COLUMN_X, GUIConstants.GUI_MIDDLE_ROW_Y + 0.2f, GUIConstants.HEALTH_LABEL_WIDTH, 0.156f), "Emotions");
             GUI.Label(GameUIScript.ScreenRect(GUIConstants.GUI_LEFT_COLUMN_X + 0.001f, GUIConstants.GUI_MIDDLE_ROW_Y + .228f, GUIConstants.HEALTH_LABEL_WIDTH, .075f),
@@ -185,8 +185,8 @@ public class EmotionWrapper : MonoBehaviour
                     break;
             }
             GUI.Label(GameUIScript.ScreenRect(GUIConstants.GUI_LEFT_COLUMN_X + 0.003f, GUIConstants.GUI_MIDDLE_ROW_Y + 0.4f, GUIConstants.HEALTH_LABEL_WIDTH, .075f), state);
-        }*/
-    }
+        }
+    }*/
 
     /// <summary>
     /// We don't want to keep changing the difficulty every few seconds.
@@ -197,12 +197,6 @@ public class EmotionWrapper : MonoBehaviour
     /// the time the wave spawns and it comes into view for the player, we
     /// still need to delay a little bit from when we send out the wave.
     /// </summary>
-    /*public void waveStart()
-    {
-        waitForWave = false;
-        currentDelay = ANALYSISDELAY * 5;
-        FileManagement.waveSpawn();
-    }*/
 
     /// <summary>
     /// Algorithmically sets up each difficulty level to have progressively more ships than the previous one.
@@ -238,7 +232,7 @@ public class EmotionWrapper : MonoBehaviour
                 haveRecentData = false;
                 wasWaiting = false;
                 // Reset stored frames to ensure we don't accidentally make judgements off them.
-                for(int i = 0; i < lastFrames.Length; i++)
+                for (int i = 0; i < lastFrames.Length; i++)
                 {
                     lastFrames[i] = AffectiveStates.None;
                 }
@@ -263,7 +257,6 @@ public class EmotionWrapper : MonoBehaviour
                     currentEmotionDuration = 0;
                     FileManagement.stateChange(currentState);
                 }
-
                 // Have they sustained that emotion long enough to consider it their state?
                 if (currentEmotionDuration == EMOTIONMAX)
                 {
@@ -274,23 +267,27 @@ public class EmotionWrapper : MonoBehaviour
                     currentEmotionDuration = 0;
                     FileManagement.emotionMax(currentState);
                     waitForWave = true;
-
+                    Debug.Log((int)currentState);
                     // Determine how (if at all) we need to modify difficulty.
                     switch (currentState)
                     {
                         case AffectiveStates.Boredom:
                             curDifficulty = stepUp();
-                            setDifficulty(1);
+                            //setDifficulty(1);
+                            Debug.Log("stepUp");
                             break;
                         case AffectiveStates.Frustration:
                             curDifficulty = stepDown();
-                            setDifficulty(1);
+                            Debug.Log("stepDown");
+                            //setDifficulty(1);
                             break;
                         case AffectiveStates.Flow:
                             // If they're in Flow, don't change anything for awhile.
-                            currentDelay = ANALYSISDELAY * 5;
+                            currentDelay = ANALYSISDELAY * 3;
+                            Debug.Log("Flow");
                             break;
                     }
+                    //DifficultyManagement.setDifficulty(curDifficulty);
                 }
             }
         }
@@ -339,6 +336,7 @@ public class EmotionWrapper : MonoBehaviour
             state = AffectiveStates.Flow;
         }
         // else - we already have none stored in state.
+        //Debug.Log((int)state);
         return state;
     }
 
@@ -457,7 +455,7 @@ public class EmotionWrapper : MonoBehaviour
     /// function.
     /// </summary>
     /// <param name="adjustment">The number to add to the current wave number to determine which wave to modify.</param>
-    private void setDifficulty(int adjustment)
+    /*private void setDifficulty(int adjustment)
     {
         FileManagement.difficultyChange(curDifficulty);
         GameObject obj = null;
@@ -466,9 +464,9 @@ public class EmotionWrapper : MonoBehaviour
         {
             obj = GameObject.Find("WaveManager");
         }
-        //********WaveManager manage = obj.GetComponent<WaveManager>();
+        WaveManager manage = obj.GetComponent<WaveManager>();
         // Check first that there is a next wave we can manipulate.
-        /*******if (manage.getWaveNum() < manage.m_Waves.Count)
+        if (manage.getWaveNum() < manage.m_Waves.Count)
         {
             int nextDiff = 0;
             // Convert from enum to int to simplify wave updating operation.
@@ -495,14 +493,14 @@ public class EmotionWrapper : MonoBehaviour
              * one goes through the list of Wave Objects (manage.m_Waves). The inner one
              * goes through that wave's list of numbers of ships (manage.m_Waves.m_Amount).
              */
-             
-            /*********for (int wave = adjustment + manage.m_Waves.Count; wave < manage.m_Waves.Count; wave++)
-            {
-                for (int ship = 0; ship < manage.m_Waves[wave].m_Amount.Count; ship++)
-                {
-                    manage.m_Waves[wave].m_Amount[ship] = swarmNums[nextDiff, ship];
-                }
-            }
-        }*/
+
+    /*for (int wave = adjustment + manage.m_Waves.Count; wave < manage.m_Waves.Count; wave++)
+    {
+        for (int ship = 0; ship < manage.m_Waves[wave].m_Amount.Count; ship++)
+        {
+            manage.m_Waves[wave].m_Amount[ship] = swarmNums[nextDiff, ship];
+        }
     }
+}
+}*/
 }

@@ -20,6 +20,6 @@ public class CompareHook : Hook
         {
             str += compares[i] + " ";
         }
-        return base.ToString();
+        return str;
     }
 }

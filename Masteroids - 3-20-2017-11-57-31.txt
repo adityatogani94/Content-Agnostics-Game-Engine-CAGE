@@ -1,3 +1,0 @@
-[0] Note: All times listed are in seconds since the start of the game!
-[0] Some times (such as this message) may be the same. This means both happened within the same frame in Unity.
-[0] Note: -9999 means emotions could not be analyzed on that frame. (Likely because the face could not be tracked)

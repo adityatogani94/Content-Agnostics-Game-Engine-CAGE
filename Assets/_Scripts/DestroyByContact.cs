@@ -24,20 +24,20 @@ public class DestroyByContact : MonoBehaviour {
         }
     }
     void OnTriggerEnter(Collider other)
-    {
-        
+    {    
         if(other.tag == "Boundary")
         {
             return;
         }
         
         TextMesh temp = GetComponent<TextMesh>();
-        Debug.Log(temp.text);
+        //Debug.Log(temp.text);
         //MasteroidsMechanics temp1 = (MasteroidsMechanics)GameInfo.currentMechanics;
+        //GameInfo.currentMechanics.sendHook(new CompareHook());
         GameInfo.currentMechanics.sendHook(new CompareHook(temp.text.ToCharArray()[0], hazardsNums)) ;
         Instantiate(explosion, transform.position, transform.rotation);
         
-        if (FrameworkCore.currentContent.wasLastActionValid())
+        if(FrameworkCore.currentContent.wasLastActionValid())
         {
             gameController.winGame();
         }

@@ -52,8 +52,25 @@ public class GameController : MonoBehaviour {
     IEnumerator SpawnWaves()
     {
         yield return new WaitForSeconds(startWait);
-        
-        for(int i = 0; i < hazards.Length; i++)
+        switch(EmotionWrapper.curDifficulty)
+        {
+            case Difficulty.One:
+                hazards = new GameObject[6];
+                break;
+            case Difficulty.Two:
+                hazards = new GameObject[7];
+                break;
+            case Difficulty.Three:
+                hazards = new GameObject[8];
+                break;
+            case Difficulty.Four:
+                hazards = new GameObject[9];
+                break;
+            case Difficulty.Five:
+                hazards = new GameObject[10];
+                break;
+        }
+        for (int i = 0; i < hazards.Length; i++)
         {
             hazards[i] = hazard;
             hazardNums[i] = FrameworkCore.currentContent.getItem();
@@ -73,9 +90,7 @@ public class GameController : MonoBehaviour {
                 break;
             }
         }
-        //yield return new WaitForSeconds(waveWait);
-
-        
+        yield return new WaitForSeconds(waveWait);
     }
 
     public void AddScore(int newScoreValue)

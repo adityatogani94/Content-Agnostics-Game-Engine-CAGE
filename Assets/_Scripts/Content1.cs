@@ -37,15 +37,19 @@ public class Content1 : Content {
     private void compareHook(CompareHook hook)
     {
         int correct = 3;
-        Debug.Log("Compare Hook Input: " + hook.input);
-        if (hook.input == correct)
+        //Debug.Log("Compare Hook Input: " + hook.input + " correct: " + correct);
+        //Debug.Log(hook.ToString());
+        int ans = hook.input - '0';
+        if (ans == correct)
         {
+            //Debug.Log("here");
             lastActionValid = true;
         }
         else
         {
             lastActionValid = false;
         }
+        Debug.Log("lastActionValid: " + lastActionValid.ToString());
     }
 
 }

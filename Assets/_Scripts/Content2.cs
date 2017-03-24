@@ -37,7 +37,8 @@ public class Content2 : Content {
     private void compareHook(CompareHook hook)
     {
         int correct = 2;
-        if (hook.input == correct)
+        int ans = hook.input - '0';
+        if (ans == correct)
         {
             lastActionValid = true;
         }

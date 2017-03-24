@@ -3,7 +3,6 @@ using UnityEngine;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using System.IO;
-
 /** Enum used for tracking status.
  */
 public enum TrackStatus
@@ -26,6 +25,13 @@ public enum FaceEffect
  * This is the core class that shows how to use visage|SDK capabilities in Unity. It connects with visage|SDK through calls to native methods that are implemented in VisageTrackerUnityPlugin.
  * It uses tracking data to transform objects that are attached to it in ControllableObjects list.
  */
+
+/*internal static class NativeMethods
+{
+    [DllImport("Plugin")]
+    public static extern int MessageBox(int hWnd, string msg, string title, uint flags);
+}*/
+
 public class Tracker : MonoBehaviour
 {
     #region Properties
@@ -143,7 +149,6 @@ public class Tracker : MonoBehaviour
 
     #endregion
 
-
     void Start()
     {
         // switch cam image
@@ -235,8 +240,6 @@ public class Tracker : MonoBehaviour
         if (SystemInfo.graphicsDeviceType == UnityEngine.Rendering.GraphicsDeviceType.OpenGLCore)
             Debug.Log("Notice: if graphics API is set to OpenGLCore, the texture might not get properly updated.");
 
-
-
     }
 
     void Update()
@@ -245,7 +248,6 @@ public class Tracker : MonoBehaviour
 		// no tracking on ios while in editor
 		return;
 #endif
-
         if (TrackerStatus != 0)
         {
 
@@ -354,7 +356,7 @@ public class Tracker : MonoBehaviour
 	 */
     bool InitializeTracker(string config, string license)
     {
-        
+        Debug.Log("Visage Tracker: Initializing tracker with config: '" + config + "'");
 
 #if (UNITY_IPHONE || UNITY_ANDROID) && UNITY_EDITOR
 		return false;
@@ -377,7 +379,6 @@ public class Tracker : MonoBehaviour
 #endif
         // initialize tracker
         VisageTrackerNative._initTracker(config, license);
-        Debug.Log("Visage Tracker: Initializing tracker with config: '" + config + "'");
 
         return true;
     }
